@@ -1,0 +1,31 @@
+account_id: '196241772369'
+deploy_target_bucket: syndicate-education-platform-custom-sandbox-artifacts-sbox01/cc4eb9d3/task02
+extended_prefix_mode: true
+iam_permissions_boundary: arn:aws:iam::196241772369:policy/eo_role_boundary
+project_path: C:\Users\kavya_krishnakumar\aws-task-lambda\Demo\task02
+region: eu-central-1
+resources_prefix: cmtr-cc4eb9d3-
+expiration: 2024-07-25T06:18:57+00:00
+temp_aws_access_key_id: ASIAS3MHLZ5IRNCLEMFG
+temp_aws_secret_access_key: V98gokC47KNBH9T8YcfRz67oImOxYNCGvgI78UVI
+temp_aws_session_token: IQoJb3JpZ2luX2VjEN7//////////wEaCXVzLWVhc3QtMSJIMEYCIQDN1BwZOzD9oWCzcuaNicCrWW6G+eLrS+2F89ken/fMKAIhAPV4B3eb5hcMfjI+KM06xSmrTig/PVqZCtELmjHofu/yKukCCLb//////////wEQARoMMTk2MjQxNzcyMzY5Igy3FMiIN7Oj5Skv5LgqvQLn3IJYNTLchh8DSfsI9D5GxRbjJFliV8SrKPPnpMAF4jbMqU3mwANicEopgi4oWTYpPEFYdM5rvrenFTH0ZuycDbsm87Dx7DxIajPM34hJDekElg8CcJolxnZlsHmRehOHXS1b52s2jaozcmYfWk0+v1UXukfVnipwMYShddeF+z/u+aMZ6wbmm0rHOwMicmpNa8vq8AxtCmNeSdUqjEcHQ8re787FCsXPLlYVdh3XaqgeTcgIh87OMN1MK7E3yhf29Eu8FhY8uYcPkd/pyHRh2C1JAZiZ/QWEHPxg4EVFL0/hSJYljtTkG5d94LIFGVuhqWYQ4w7MVBcVbc5AdSR7qvxNupwb3HXgAlVXG55oVYeHue5HCh8tPepBWxjhEwErhrEH0IzjIg4B3DlyQFEgG7OiMfbA66CGKDLVtjDBwIe1BjqcAVp547hxpaFWhHps1WtpEMUXgxqGDH6LHIwL7rTKBXax/sVXDrRkCZXGMOPy9Ro6/n5jTX5ESGCqypZJIMj2Eo82YbyyewlXMY71YlzzNnnZewXxcCUYjwGWSZH5OU2E9rBDOLxffnHO4CL4hZNaFmygIpgU/dtrAg/4xkOlKECsHw6ZhoS1JktJMxM9JCN1Z8Zq2DlJd73Uw/lxhg==
+use_temp_creds: false
+
+lambda:
+  hello_world:
+    handler: com.task02.HelloWorld::handleRequest
+    runtime: java8
+    source_code: ./hello_world
+    role: hello_world-role
+    api_gw:
+      - name: HelloWorldApi
+        paths:
+          - /hello
+        methods:
+          - GET
+iam:
+  hello_world-role:
+    assume_role_policy: lambda
+    managed_policy_arns:
+      - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      - arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess
