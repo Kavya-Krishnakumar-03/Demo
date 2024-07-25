@@ -7,6 +7,50 @@ lambdas:
 events:
 - operation: deploy
   initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  deploy_name: task02
+  time_start: '2024-07-25T11:42:07Z'
+  time_end: '2024-07-25T11:42:11Z'
+  duration_sec: 4.774
+  operation_status: true
+  rollback_on_error: false
+- operation: build
+  initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  time_start: '2024-07-25T11:40:43Z'
+  time_end: '2024-07-25T11:41:49Z'
+  duration_sec: 65.292
+- operation: upload
+  initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  time_start: '2024-07-25T11:40:57Z'
+  time_end: '2024-07-25T11:41:49Z'
+  duration_sec: 51.27
+- operation: package_meta
+  initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  time_start: '2024-07-25T11:40:53Z'
+  time_end: '2024-07-25T11:40:53Z'
+  duration_sec: 0.015
+- operation: assemble
+  initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  time_start: '2024-07-25T11:40:48Z'
+  time_end: '2024-07-25T11:40:53Z'
+  duration_sec: 5.052
+- operation: assemble_java_mvn
+  initiator: kavya_krishnakumar
+  bundle_name: task02_240725.114040
+  time_start: '2024-07-25T11:40:48Z'
+  time_end: '2024-07-25T11:40:53Z'
+  duration_sec: 5.039
+- operation: test
+  initiator: kavya_krishnakumar
+  time_start: '2024-07-25T11:40:48Z'
+  time_end: '2024-07-25T11:40:48Z'
+  duration_sec: 0.001
+- operation: deploy
+  initiator: kavya_krishnakumar
   bundle_name: task02_240725.112921
   deploy_name: task02
   time_start: '2024-07-25T11:30:14Z'
@@ -139,14 +183,14 @@ events:
   duration_sec: 0.0
 locks:
   modification_lock:
-    last_modification_date: '2024-07-25T11:30:19Z'
+    last_modification_date: '2024-07-25T11:43:33Z'
     locked_till: null
     initiator: kavya_krishnakumar
 latest_deploy:
   initiator: kavya_krishnakumar
-  bundle_name: task02_240725.112921
+  bundle_name: task02_240725.114040
   deploy_name: task02
-  time_start: '2024-07-25T11:30:14Z'
-  time_end: '2024-07-25T11:30:19Z'
-  duration_sec: 5.13
+  time_start: '2024-07-25T11:42:07Z'
+  time_end: '2024-07-25T11:42:11Z'
+  duration_sec: 4.774
   operation_status: true
