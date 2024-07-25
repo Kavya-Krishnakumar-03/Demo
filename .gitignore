@@ -3,7 +3,9 @@
 
 # Log file
 *.log
-
+.idea/
+task01/target/
+task01/.syndicate-config-dev
 # BlueJ files
 *.ctxt
 
